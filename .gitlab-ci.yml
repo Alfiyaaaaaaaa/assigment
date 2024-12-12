@@ -1,0 +1,12 @@
+hello_world_job:
+  script:
+    - echo "Hello, World!"
+stages:
+  - greet
+hello_world_job:
+  stage: greet
+  script:
+    - echo "Hello, World!"
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH
